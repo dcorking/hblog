@@ -1,0 +1,106 @@
+
+# Tags
+
+If you are using etags, stop doing that. The best tag system is gnu
+global, it is simply amazing. If you are on a debian machine, I
+recommend getting [gnu global](http://www.gnu.org/software/global/download.html) from sourc
+hand. The reason is that the version of gnu global on apt-get is
+incredibly outdated. Once you have it installed, go to the root of
+your linux, or any C project, directory and type `gtags`. This will
+create all the infrastructure that we will soon be using in
+emacs. Note that the gtags file for Linux takes a few moments and
+clocks in at about 100mb, this is Linux source code after all...
+
+# Emacs Side
+
+Now that we have gtags up and running, we can now focus on the emacs
+portion of things. Here's my hook for C-mode in emacs:
+
+```emacs-lisp
+(add-hook 'c-mode-hook '(lambda ()
+                          (setq-local show-trailing-whitespace t)
+                          (semantic-mode)
+                          (auto-complete-mode -1)
+                          (company-mode)
+                          (global-set-key (kbd "C-c C-f") 'helm-command-prefix)
+                          (global-unset-key (kbd "C-x c"))
+                          (define-key helm-gtags-mode-map (kbd "M-s") 'helm-gtags-select)
+                          (setq helm-quick-update                     t ; do not display invisible candidates
+                                helm-split-window-in-side-p           t ; open helm buffer inside current window, not occupy whole other window
+                                helm-buffers-fuzzy-matching           t ; fuzzy matching buffer names when non--nil
+                                helm-move-to-line-cycle-in-source     t ; move to end or beginning of source when reaching top or bottom of source.
+                                helm-ff-search-library-in-sexp        t ; search for library in `require' and `declare-function' sexp.
+                                helm-scroll-amount                    8 ; scroll 8 lines other window using M-<next>/M-<prior>
+                                helm-ff-file-name-history-use-recentf t
+                                helm-gtags-ignore-case t
+                                helm-gtags-auto-update t
+                                helm-gtags-use-input-at-cursor t
+                                helm-gtags-pulse-at-cursor t
+                                helm-gtags-prefix-key "\C-cg"
+                                helm-gtags-suggested-key-mapping t)
+                          (helm-gtags-mode)
+                          (define-key helm-gtags-mode-map (kbd "M-.") 'helm-gtags-dwim)
+                          (define-key helm-gtags-mode-map (kbd "M-,") 'helm-gtags-pop-stack)
+                          ;;Too complex for me right now. 
+                          ;;(helm-mode)
+                          (define-key company-mode-map (kbd "M-h") 'company-c-headers)
+                          (hs-minor-mode)
+                          (define-key hs-minor-mode-map (kbd "C-c C-t") 'hs-toggle-hiding)
+                          (define-key c-mode-map (kbd "C-c C-c") 'compile)
+                          (semantic-mru-bookmark-mode)
+                          (define-key semantic-mode-map (kbd "M-]") 'semantic-ia-fast-jump)
+                          (define-key semantic-mode-map (kbd "M-[") 'semantic-ia-fast-jump-back)
+                          (define-key c-mode-map (kbd "C-c C-i") 'default-c-includes)
+                          (ggtags-mode)
+                          (define-key ggtags-mode-map (kbd "M-.") nil)
+                          (define-key ggtags-mode-map (kbd "M-<") nil)
+                          (define-key ggtags-mode-map (kbd "M->") nil)
+                          (define-key ggtags-mode-map (kbd "M-n") nil)
+                          (define-key ggtags-mode-map (kbd "M-p") nil)
+                          (define-key ggtags-mode-map (kbd "M-,") nil)
+                          (define-key ggtags-mode-map (kbd "M-]") nil)
+                          (define-key ggtags-mode-map (kbd "M--") 'ggtags-find-reference)
+                          ;;Flycheck has issues with tramp, just FYI. 
+                          ;;(flycheck-mode)
+                          (linux-c-mode)))
+```
+
+That's quite a bit, but I'll explain all the relevant parts. I don't
+really use helm, other than for the features of `helm-gtags-dwin` and
+`helm-gtags-pop-stack` simply because Helm is too big for my tastes
+and it goes against how most of emacs "does" things. Basically
+whenever I want to find where a struct, function, etc is defined, I
+can just hit `M-.` and gtags will take me there, if I want to come
+back to where I was before looking up the definition, then I hit
+M-,. The reader might notice that I define many of the keys from
+`ggtags-mode-map` to `nil`, this is because the keys conflicted with
+my desired key bindings and the only thing that I found of use from
+ggtags-mode was finding all the references made to a piece of code,
+this is via the `ggtags-find-reference` function.  This is a feature
+that Semantic can supposedly do, but getting it to work right with the
+remote machine and the messed up header paths was just too much work,
+plus it had some issues about `call-process`. Ggtags-mode is able to
+do this incredibly well and fast. Finally there is the call to
+`linux-c-mode`, that is simply defined as:
+
+```emacs-lisp
+(defun linux-c-mode ()
+  "C mode with adjusted defaults for use with the linux kernel."
+  (interactive)
+  (setq c-set-style "linux")
+  (setq c-brace-offset -8)
+  (setq c-default-style "linux")
+  (setq c-basic-offset 8)
+  (setq tab-width 8))
+```
+
+Since our homework assignments had Linux's `checkpatch.pl` script run
+against them, it made sense to just start out with Linux style
+C-coding enforced in emacs itself.
+
+# Wrapping up
+
+That's basically it. I skipped over a few things, but if you have
+questions, feel free to ask in the comments and I'll try to answer
+them. For reference, my `init.el` is [[<https://github.com/fxfactorial/emacsd/blob/m>
+other goodies. 

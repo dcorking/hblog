@@ -252,7 +252,7 @@ feedConfiguration title = FeedConfiguration
                           , feedDescription = "Personal blog of Edgar Aroutiounian"
                           , feedAuthorName  = "Edgar Aroutiounian"
                           , feedAuthorEmail = "edgar@beancode.io"
-                          , feedRoot        = "http://beancode.io"
+                          , feedRoot        = "http://hyegar.com"
                           }
 
 --------------------------------------------------------------------------------
