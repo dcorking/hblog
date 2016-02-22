@@ -7,6 +7,10 @@ Since the binary is built dynamically, make sure that hakyll is installed or
 updated with
 
     cabal install hakyll --enable-shared
+	
+and build with:
+
+	ghc --make -threaded hblog.hs
 
 ## Dependencies:
 
