@@ -1,7 +1,7 @@
 ---
 title: Write OCaml, run on node
 tags: OCaml, nodejs, javascript, js_of_ocaml
-description: write OCaml, compile to JavaScript
+description:write OCaml, compile to JavaScript
 ---
 
 I've been exposed to Node, its an amazing ecosystem with great cross
