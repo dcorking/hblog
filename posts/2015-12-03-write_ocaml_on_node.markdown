@@ -1,3 +1,9 @@
+---
+title: Write OCaml, run on node
+tags: OCaml, nodejs, javascript, js_of_ocaml
+description:
+---
+
 I've been exposed to Node, its an amazing ecosystem with great cross
 platform support and a great standard library; my only issue is
 **JavaScript**. So I've been writing several libraries, bindings, that
