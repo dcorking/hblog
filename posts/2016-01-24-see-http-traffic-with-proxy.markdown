@@ -1,3 +1,9 @@
+---
+title: Proxy yourself
+tags: infosec, proxy, mitmproxy
+description: Proxy yourself
+---
+
 Often times we want to see our network traffic in an organized way,
 one tool we can use is `tcpdump` but its a pretty low level tool and
 often times HTTP is all we actually care about. 

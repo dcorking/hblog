@@ -1,3 +1,9 @@
+---
+title:Calling OCaml from Objective-C
+tags: OCaml, objective-c, cross compiler
+decription: Calling OCaml from Objective-C
+---
+
 I love iOS and I love OCaml, so I've packaged up an OCaml compiler for
 iOS via opam. Now all you need to build OCaml programs on the iPhone
 is opam!

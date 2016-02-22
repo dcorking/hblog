@@ -177,10 +177,11 @@ The `|>` just means piping, its piping the output of
 `iter`
 
 1.  Reading a file
-
-    #require "podge"
-    let () = 
-      Podge.Unix.read_lines "code.ml" |> List.iter print_endline
+```ocaml
+#require "podge"
+let () = 
+  Podge.Unix.read_lines "code.ml" |> List.iter print_endline
+  ```
 
 Similar to 1, this reads all lines of file and gives it to the input
 of the partially applied function `iter`.

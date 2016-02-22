@@ -1,3 +1,9 @@
+---
+title: Healthcare still sucks
+tags: healthcare, bureacracy
+decription: healthcare nightmare
+---
+
 My dad lives in Florida and isn't too well off. So much so that since
 the early part of this year I've been paying for his health insurance,
 its the first time he has ever had regular healthcare since leaving
