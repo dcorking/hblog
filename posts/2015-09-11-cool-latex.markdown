@@ -1,3 +1,9 @@
+---
+title: Cool LaTeX
+tags: latex, darwin
+description: Install LaTeX on OS X
+---
+
 This post is going to add a lot of value to your life; I'm going to
 show you how to:
 
@@ -7,26 +13,28 @@ show you how to:
 
 # Installing LaTeX
 
-Most folks that install LaTeX on OS X probably do it with the [MacTex](https://tug.org/mactex/)
-package. This is probably fine for most people, but the trouble with
-MacTex is the size of the install; Its huge! The last time I checked,
-MacTex ended up using at least 1.5 **gigabytes**. That's a lot of wasted
-space, especially for things like the LaTeX editor (since I do my
-LaTeX work in emacs). So here are the steps I recommend to installing
-LaTeX on OS X.
+Most folks that install LaTeX on OS X probably do it with the
+[MacTex](https://tug.org/mactex/) package. This is probably fine for
+most people, but the trouble with MacTex is the size of the install;
+Its huge! The last time I checked, MacTex ended up using at least 1.5
+**gigabytes**. That's a lot of wasted space, especially for things
+like the LaTeX editor (since I do my LaTeX work in emacs). So here are
+the steps I recommend to installing LaTeX on OS X.
 
 ## Installing LaTeX on OS X
 
 1.  If you already have MacTex installed, get rid of it. Its pretty
-    simple, just follow the directions [here](https://tug.org/mactex/uninstalling.html).
+    simple, just follow the directions
+    [here](https://tug.org/mactex/uninstalling.html).
 2.  Install BasicTex. This gives you stuff like pdfLatex, aka the
     compiler and core LaTeX. You can get the package installer from
     [here](http://www.tug.org/mactex/morepackages.html).
-3.  Download the Tex Live Utility from [here](https://github.com/amaxwell/tlutility). Tex Live Utility is your 
-    new LaTeX best friend. It will let you update all packages and
-    install new ones whenever you need them, and you will need them
-    since you only installed BasicTex. We will use it later on in this
-    post.
+3.  Download the Tex Live Utility from
+    [here](https://github.com/amaxwell/tlutility). Tex Live Utility is
+    your new LaTeX best friend. It will let you update all packages
+    and install new ones whenever you need them, and you will need
+    them since you only installed BasicTex. We will use it later on in
+    this post.
 
 # Org Mode
 
@@ -100,7 +108,8 @@ changes to my work nearly instantly in the PDF buffer.
 
 # Animations in a PDF
 
-For a final paper on modifications to the [Perceptron](http://en.wikipedia.org/wiki/Perceptron) algorithm, I
+For a final paper on modifications to the
+[Perceptron](http://en.wikipedia.org/wiki/Perceptron) algorithm, I
 wanted to include a neat animation of the Perceptron
 converging. Naturally I did my paper in emacs. Here are the steps
 needed.
@@ -132,11 +141,13 @@ needed.
     all the details.
 
 After exporting the PDF, you'll have a real animation that is
-completely self contained in the PDF. 
+completely self contained in the PDF.
 
-**Note:** The Preview.app on OS X is kind of crappy and doesn't actually
-animate the graphic for reasons unknown to me, I recommend you use
-Adobe Reader.
+**Note:** The Preview.app on OS X is kind of crappy and doesn't
+actually animate the graphic for reasons unknown to me, I recommend
+you use Adobe Reader.
+![](/images/latex_preview.png)
+
 
 I hope this post helps makes your papers all that more exciting and
 rewarding.
