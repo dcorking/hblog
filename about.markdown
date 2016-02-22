@@ -7,7 +7,8 @@ description: Functional programming hacker in Oakland, California
 
 ![Me in Chinatown, SF](/images/avatars.jpg)
 
-This is a copy from an amazing blog done by abizern
+This is a copy from an amazing blog done by
+[abizern](http://abizern.org/about/), I just put my content instead.
 
 ## Links
 
