@@ -1,0 +1,38 @@
+I love elegant code, code that just flows and lets you "see" how the
+data moves through execution. As part of my [brozip](https://github.com/fxfactorial/brozip) application, I
+wanted to give the feature of recursively compressing or decompressing
+a directory. So I just wrote exactly what came to mind and came up
+with this
+
+```ocaml
+let rec walk_and_action action node =
+  if Sys.is_directory node
+  then (Sys.readdir node
+        |> Array.to_list
+        |> List.map (Filename.concat node)
+        |> Lwt_list.iter_p (walk_and_action action))
+  else action node
+```
+
+Where `action` has type: `string -> unit Lwt.t` (a function that takes
+a `string` and returns `unit Lwt.t`) and `node` is just a `string` for
+the file name.
+Translating the code into English, we first check if the file name
+represents a directory, if its a directory then we 
+
+> 1.  Read the directory's contents
+> 2.  Convert the returned array into a list
+> 3.  Use a partially evaluated function, `Filename.concat node` and
+>     finish that computation for each of the file names in the list
+> 4.  Use correct concatenated strings to feed to `Lwt_list.iter_p` which
+>     will call the partially evaluated function `walk_and_action action`
+>     on each of the files. The `iter_p` function tells us that it will
+>     call its given function concurrently, which is very nice.
+
+If its not a directory then we just call the function for the given
+file.
+
+Notice how elegant this code is, the whole function body is just one
+expression and the data just flows from the output of one function as
+the input of the other, there's no separation between the function
+calls.

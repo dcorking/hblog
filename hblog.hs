@@ -270,7 +270,7 @@ deployScript = "echo \"-- Publishing to hyegar.com\" &&\
                \git reset --hard github/master && \
                \echo \"-- Adding new files to deploy repository...\" && \
                \rm -rf * && \
-               \cp -r ../_site/ . && \
+               \cp -r ../_site/* . && \
                \echo \"-- Commiting changes\" && \
                \dt=`date -u \"+%Y-%m-%d %H:%M:%S %Z\"` && \
                \message=\"Site update at $dt\" && \

@@ -11,7 +11,9 @@ These are some key notes that you should know.
 1.  `opam` is the package manager for OCaml. It is very advanced and
     supports many features. The most basic of which is 
     
-        $ opam install <some_package>
+    ```shell
+    $ opam install <some_package>
+    ```
     
     For people on `OS X`, you can get it on `brew` and all the `Linux`
     distros should have `opam` for you to install. For Windows people,
@@ -22,7 +24,9 @@ These are some key notes that you should know.
 
 2.  Once you have `opam` installed, you probably want to do:
     
-        $ opam switch 4.02.3
+    ```shell
+    $ opam switch 4.02.3
+    ```
     
     This will install the latest version of the compiler.
 
@@ -45,47 +49,53 @@ These are some key notes that you should know.
     
     5.3) Here is a template of the contents of the **\_oasis** file
     
-        OASISFormat:  0.4
-        OCamlVersion: >= 4.02.3
-        Name:         opam_package_name
-        Version:      0.1
-        Maintainers:  New OCaml programmer
-        Homepage:     http://my_coolsite.com
-        Synopsis:     Some short description
-        Authors:      Cool@me.com
-        License:      BSD-3-clause
-        Plugins:      META (0.4), DevFiles (0.4)
-        AlphaFeatures: ocamlbuild_more_args
-        
-        Description:
-          Some cool description
-        
-        # This is a comment and this below creates an binary program    
-        Executable <some_program_name>
-          Path: src
-          BuildTools:ocamlbuild
-          install: true
-          MainIs: main.ml
-          CompiledObject: native
-          BuildDepends: package_one, package_two
-        
-        # Another comment, this builds a library called pg
-        Library pg
-          Path:         src
-          # oasis will figure out the dependencies, 
-          # Just list the modules you want public, 
-          # Note that there's no .ml, just give the name
-          Modules:      Pg
-          CompiledObject: byte
-          BuildDepends: some_package
+    ```shell
+    OASISFormat:  0.4
+    OCamlVersion: >= 4.02.3
+    Name:         opam_package_name
+    Version:      0.1
+    Maintainers:  New OCaml programmer
+    Homepage:     http://my_coolsite.com
+    Synopsis:     Some short description
+    Authors:      Cool@me.com
+    License:      BSD-3-clause
+    Plugins:      META (0.4), DevFiles (0.4)
+    AlphaFeatures: ocamlbuild_more_args
+    
+    Description:
+      Some cool description
+    
+    # This is a comment and this below creates an binary program    
+    Executable <some_program_name>
+      Path: src
+      BuildTools:ocamlbuild
+      install: true
+      MainIs: main.ml
+      CompiledObject: native
+      BuildDepends: package_one, package_two
+    
+    # Another comment, this builds a library called pg
+    Library pg
+      Path:         src
+      # oasis will figure out the dependencies, 
+      # Just list the modules you want public, 
+      # Note that there's no .ml, just give the name
+      Modules:      Pg
+      CompiledObject: byte
+      BuildDepends: some_package
+    ```
     
     5.4) Generate the Makefile, setup.ml, configure and other build crap.
     
-        $ oasis setup -setup-update dynamic
+    ```shell
+    $ oasis setup -setup-update dynamic
+    ```
     
     5.5) Actually build your code, yes its just a call to make.
     
-        $ make
+    ```shell
+    $ make
+    ```
     
     5.6) You can stop here, but you can go even further with
          `oasis2opam`. Install it with: `opam install oasis2opam`, then
@@ -96,7 +106,9 @@ These are some key notes that you should know.
          with opam just by doing this in the same project root
          directory: 
     
-        $ opam pin add <your_package_name> . -y
+    ```shell
+    $ opam pin add <your_package_name> . -y
+    ```
 
 6.  `merlin` is a OCaml program that is simply amazing it drives code
     completion for plugins available in `emacs` and `vim`. Once you
@@ -104,9 +116,11 @@ These are some key notes that you should know.
     project so that `merlin` knows what packages to code complete for,
     a sample `.merlin` file looks like this:
     
-        B _build/src
-        S src
-        PKG cmdliner js_of_ocaml
+    ```shell
+    B _build/src
+    S src
+    PKG cmdliner js_of_ocaml
+    ```
     
     Notice how I put the `B _build/src` That sort of assumes you're
     using `_oasis` and you made the `src` directory I mentioned earlier.
@@ -153,13 +167,17 @@ code samples assume the file is named `code.ml` and can be run with
 
 First install with opam:
 
-    $ opam install podge
+```shell
+$ opam install podge
+```
 
 1.  Reading output of a process
 
-    #require "podge"
-    let () = 
-      Podge.Unix.read_process_output "ls -halt" |> List.iter print_endline
+```ocaml
+#require "podge"
+let () = 
+  Podge.Unix.read_process_output "ls -halt" |> List.iter print_endline
+```
 
 The `|>` just means piping, its piping the output of
 `read_process_output` into the input of the partially applied function
@@ -167,9 +185,11 @@ The `|>` just means piping, its piping the output of
 
 1.  Reading a file
 
-    #require "podge"
-    let () = 
-      Podge.Unix.read_lines "code.ml" |> List.iter print_endline
+```ocaml
+#require "podge"
+let () = 
+  Podge.Unix.read_lines "code.ml" |> List.iter print_endline
+```
 
 Similar to 1, this reads all lines of file and gives it to the input
 of the partially applied function `iter`.
