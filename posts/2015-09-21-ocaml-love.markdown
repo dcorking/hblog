@@ -1,3 +1,9 @@
+---
+title: OCaml love
+tags: OCaml, functional programming
+description: OCaml love
+---
+
 Programmers usually have a choice of language to use via what job they
 decide to seek. Its probably the case that the majority of programmers
 don't really care what language they use and really just care about
@@ -9,23 +15,26 @@ brand of hammers they're using.
 
 # My choice
 
-For me the best language to use is [OCaml](http://ocaml.org). Its a statically typed
-functional programming language that has a powerful type system. In
-addition to being a functional language, OCaml lets me write
-imperative code with real mutation and this is often very useful, i.e
-having a local reference variable really makes some code so much
-cleaner and easier to deal with and that really ought to be our goal,
-clean and easy to reason about code.
+For me the best language to use is [OCaml](http://ocaml.org). Its a
+statically typed functional programming language that has a powerful
+type system. In addition to being a functional language, OCaml lets me
+write imperative code with real mutation and this is often very
+useful, i.e having a local reference variable really makes some code
+so much cleaner and easier to deal with and that really ought to be
+our goal, clean and easy to reason about code.
 
 # What can you do with it?
 
 I keep getting this question and its a little strange. What can I do
 with this language? Well anything else you can do in any other
 programming language. For me I'm working in the day-time as an OCamler
-and I use it for my [personal projects](https://github.com/fxfactorial). I even write JavaScript in
-OCaml via [js\_of\_ocaml](http://ocsigen.org/js_of_ocaml/).
+and I use it for my
+[personal projects](https://github.com/fxfactorial). I even write
+JavaScript in OCaml via
+[js\_of\_ocaml](http://ocsigen.org/js_of_ocaml/).
 
-Here's an example straight from my bindings to [libmaxminddb](https://github.com/maxmind/libmaxminddb).
+Here's an example straight from my bindings to
+[libmaxminddb](https://github.com/maxmind/libmaxminddb).
 
 ```ocaml
 (* File named loc_dump.ml *)
