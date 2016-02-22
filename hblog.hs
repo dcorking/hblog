@@ -248,11 +248,11 @@ feedCtx = mconcat
 
 feedConfiguration :: String -> FeedConfiguration
 feedConfiguration title = FeedConfiguration
-                          { feedTitle       = "Abizern.org - " ++ title
-                          , feedDescription = "The developer and personal blog of Abizer Nasir, a freelance iOS and OS X developer in London, UK"
-                          , feedAuthorName  = "Abizer Nasir"
-                          , feedAuthorEmail = "abizern@abizern.org"
-                          , feedRoot        = "http://abizern.org"
+                          { feedTitle       = "hyegar.com - " ++ title
+                          , feedDescription = "Personal blog of Edgar Aroutiounian"
+                          , feedAuthorName  = "Edgar Aroutiounian"
+                          , feedAuthorEmail = "edgar@beancode.io"
+                          , feedRoot        = "http://beancode.io"
                           }
 
 --------------------------------------------------------------------------------
@@ -261,7 +261,7 @@ config :: Configuration
 config = defaultConfiguration { deployCommand = deployScript }
 
 deployScript :: String
-deployScript = "echo \"-- Publishing to abizern.org\" &&\
+deployScript = "echo \"-- Publishing to hyegar.com\" &&\
                \echo \"-- Rebuilding site...\" && \
                \./hblog rebuild && \
                \cd _publish && \

@@ -1,6 +1,7 @@
 # hblog
 
-Source that uses [Hakyll](http://jaspervdj.be/hakyll/) to generate the static pages for [abizern.org](http://abizern.org)
+Source that uses [Hakyll](http://jaspervdj.be/hakyll/) to generate the
+static pages for [hyegar.com](http://hyegar.com)
 
 Since the binary is built dynamically, make sure that hakyll is installed or
 updated with

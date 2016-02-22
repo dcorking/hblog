@@ -1,13 +1,12 @@
 /* humanstxt.org */
 
 /* TEAM */
-Author: Abizer Nasir
-Contact: abizern@abizern.org
-Twitter: @abizern
-App.net: @abizern
+Author: Edgar Aroutiounian
+Contact: edgar@beancode.io
+Twitter: @edgararout
 LinkedIn: http://www.linkedin.com/e/fpf/82724921
-GitHub: http://github.com/Abizern
-From: London, UK
+GitHub: http://github.com/fxfactorial
+From: Oakland, CA
 
 /* Site */
 Language: English
