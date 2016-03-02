@@ -101,10 +101,10 @@ of `merlin`, you can even get `jedi` style docstring popups like so:
 The elisp that I use for my `init.el` is listed after the `oasis`
 tutorial at the end of this post.
 
-7.  There are no full blown IDEs for OCaml, learn `emacs` or
-`vim`. EDIT: apparently `Sublime Text` has a merlin plugin, if you're
-already familiar with Sublime Text then just stick with it, merlin is
-really what matters here.
+7.  There are no full blown IDEs for OCaml, learn `emacs`, `vim`.
+Also `Sublime Text` has a merlin plugin, if you're already familiar
+with Sublime Text then just stick with it, merlin is really what
+matters here.
 
 8. `utop` is an enhanced repl, its better than the plain `ocaml`
 repl. Install it with `opam install utop`
@@ -132,7 +132,7 @@ that wacky `>>=` function. But you really shouldn't fret about what a
 Monad is or represents, just follow the type signature and you'll be
 fine. For a more detailed treatment of Monads in OCaml and a code
 example to talk to the `Stripe` API, see
-[this](http://hyegar.com/blog/2015/09/23/let's-just-use-monads/).
+[this](http://hyegar.com/2015/10/12/monads-you-can-understand/).
 
 ## Doing simple tasks (shameless plug)
 
