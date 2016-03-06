@@ -7,7 +7,7 @@ description: Datetime,Crypto tutorial in OCaml
 This is another blog post in my quest to improve the state of OCaml
 coding for the average programmer. Today's blog post is getting a date
 string in OCaml, a seemingly trivial thing to do in many other
-programming languages.
+programming languages, and using it in a real world hashing example.
 
 Low level way
 ================
@@ -46,7 +46,13 @@ $ opam install calendar
 The API of `calendar`, which you'll find under the module
 `CalendarLib`, is rather large. Here's some real world code that you
 can reuse, built upon. The example also uses a cryptographic package
-which you can get with `opam install nocrypto`.
+which you can get with 
+
+```shell
+$ opam install nocrypto
+```
+
+and the code:
 
 ```ocaml
 (* Assume this is code.ml *)
