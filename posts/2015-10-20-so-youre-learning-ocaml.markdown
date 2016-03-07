@@ -1,6 +1,6 @@
 ---
 title: So you're learning OCaml!
-tags: OCaml, functional programming
+tags: ocaml, functional programming
 description: Learning OCaml
 ---
 

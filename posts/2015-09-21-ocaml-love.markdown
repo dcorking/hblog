@@ -1,6 +1,6 @@
 ---
 title: OCaml love
-tags: OCaml, functional programming
+tags: ocaml, functional programming
 description: OCaml love
 ---
 

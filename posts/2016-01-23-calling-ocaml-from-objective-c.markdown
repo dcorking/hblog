@@ -1,6 +1,6 @@
 ---
 title: Calling OCaml from Objective-C
-tags: OCaml, objective-c, cross compiler
+tags: ocaml, objective-c, cross compiler
 decription: Calling OCaml from Objective-C
 ---
 
