@@ -12,6 +12,11 @@ source and it was a big challenge. Here's my general notes and
 pointers to help you get over this hump. I assume you know what
 mirageos/xen are.
 
+Much MUCH thanks to [Thomas Leonard](http://roscidus.com/blog/) and
+[Mindy Preston](http://somerandomidiot.com/) for lending me a
+cubieboard2 and helping me with all the debugging, compiling issues;
+wouldn't have been able to do it without them.
+
 Machine Setup
 ================
 
