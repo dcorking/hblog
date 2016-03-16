@@ -11,7 +11,7 @@ import Text.Pandoc
 --------------------------------------------------------------------------------
 main :: IO ()
 main = hakyllWith config $ do
-  tags <- buildTags "posts/*" (fromCapture "tags/ocaml")
+  tags <- buildTags "posts/*" (fromCapture "tags/*")
 
   match (fromList staticFiles) $ do
     route idRoute
