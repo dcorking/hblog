@@ -10,7 +10,8 @@ found
 [this](https://www.reddit.com/r/ocaml/comments/3qapbv/question_about_writing_a_timeout_function_and_the/)
 
 Here's my take on the timeout function, basically its the same but I
-push everything into the timeout function itself.
+push everything into the timeout function itself and use labeled args
+along a callback for when the timeout goes off.
 
 ```ocaml
 let timeout ?(on_timeout = fun () -> ()) ~arg ~timeout ~default_value f =
