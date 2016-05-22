@@ -1,5 +1,5 @@
 ---
-title: Using system threads with Lwt.
+title: Using system threads with Lwt
 tags: ocaml, lwt, threading
 decription: Sample of Lwt_premptive
 ---
