@@ -120,7 +120,8 @@ Grand Kid
 Depth First Search, Level order traversal complete examples
 ====================================================================
 
-Now here's an example of a preorder depth first search.
+Now here's an example of a preorder depth first search and level order
+traversal.
 
 ```ocaml
 class type ['data] tree_node = object
