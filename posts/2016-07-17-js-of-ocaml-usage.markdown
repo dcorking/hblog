@@ -162,9 +162,19 @@ let () =
   depth_first_search root |> print_newline
 ```
 
-and compile it just like given earlier in the blog post. Yay, we used
-the resources of two programming languages standard libaries in one
-program.
+and compile it just like given earlier in the blog post. Shameless
+plug, you can also turn it into an executable with a feature I added
+to the `js_of_ocaml` compiler, 
+
+```ocaml
+$ ocamlfind ocamlc -package js_of_ocaml.ppx -linkpkg trees_in_js.ml
+$ js_of_ocaml --custom-header='#!/usr/bin/env node' a.out -o T.js
+$ chmod +x T.js
+$ /T.js
+```
+
+Yay, we used the resources of two programming languages standard
+libaries in one program!
 
 Now we can return to why the typing of the `class type` matters. The
 fully correct typing of `tree_node` is:
