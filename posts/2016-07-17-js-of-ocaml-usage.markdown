@@ -117,8 +117,8 @@ h { t: 0, c: 'Grand Kid', l: 9 }
 Grand Kid
 ```
 
-Depth First Search, complete example
-=========================================
+Depth First Search, Level order traversal complete examples
+====================================================================
 
 Now here's an example of a preorder depth first search.
 
@@ -148,6 +148,23 @@ let depth_first_search starting_node =
 
   done
 
+let level_order starting_node =
+  let q = Queue.create () in
+  Queue.add starting_node q;
+
+  while not (Queue.is_empty q) do
+    let pop = Queue.pop q in
+    Printf.sprintf "%s " pop##.value
+    |> print_string;
+
+    if Js.Opt.(return pop##.left |> test)
+    then Queue.push pop##.left q;
+
+    if Js.Opt.(return pop##.right |> test)
+    then Queue.push pop##.right q
+
+  done
+
 let () =
   let root = new%js node "F" in
   root##.left := new%js node "B";
@@ -159,7 +176,8 @@ let () =
   root##.left##.right##.right := new%js node "E";
   root##.right##.right##.left := new%js node "H";
 
-  depth_first_search root |> print_newline
+  depth_first_search root |> print_newline;
+  level_order root |> print_newline
 ```
 
 and compile it just like given earlier in the blog post. Shameless
