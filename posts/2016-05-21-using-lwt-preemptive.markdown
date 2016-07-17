@@ -5,15 +5,21 @@ decription: Sample of Lwt_premptive
 ---
 
 This blog post shows you how to use real system threads in OCaml by
-using `Lwt`, `Lwt_preemptive`.
+using `Lwt`, `Lwt_preemptive`. 
 
-Common complaint about multicore
+# !!Note!!
+
+While this shows system threads being used, only one is will actually
+be running at any given point in time (Think this akin to Python's
+single threadedness, still useful to use threads if bottleneck are IO)
+
+Common complaint about multicore 
 =====================================
 
-A common complaint about OCaml is the lack of multicore, about the
-single threadedness of the runtime. This is true but its not like
-`OCaml` programmers don't have solutions! Here's an easy example that
-you can instantly use in your coding.
+A common complaint about OCaml is the lack of true parallelism, about
+the single threadedness of the runtime. This is true but its not like
+`OCaml` programmers don't have solutions some solutions. Here's an
+easy example that you can instantly use in your coding.
 
 Setup
 =====
