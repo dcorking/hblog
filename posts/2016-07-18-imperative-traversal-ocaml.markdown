@@ -1,6 +1,6 @@
 ---
-title: Imperatively traverse binary trees in OCaml
-tags: ocaml, trees, traversal, in_order, post_order
+title: Imperatively traverse binary trees in OCaml, print zigzag
+tags: ocaml, trees, traversal, in_order, post_order, zigzag
 description: tree traversals
 ---
 
@@ -9,6 +9,10 @@ tend to be functional examples. Here are two imperative tree
 traversals, a pre-order and in-order. I'm still trying to work out a
 nice post-order imperative solution in OCaml so if you have one then
 please tweet it at me: @edgararout
+
+EDIT: I've added a zigzag function procedure as well. This question
+came up recently at an interview and I messed it up. The point is to
+print the tree in a zigzag pattern.
 
 ```ocaml
 type 'a node = {mutable data: 'a;
@@ -82,6 +86,33 @@ let in_order_traversal tree =
     done
   with W.Stop_loop -> ()
 
+let print_spiral root =
+  let (current, next) = Stack.(ref (create ()), ref (create ())) in
+  let left_to_right = ref true in
+
+  let swap a b = let (a_, b_) = !a, !b in a := b_; b := a_ in
+
+  Stack.push root !current;
+
+  while not (Stack.is_empty !current) do
+    let r = Stack.top !current in
+    Stack.pop !current |> ignore;
+    Printf.sprintf "%s " r.data |> print_string;
+    if !left_to_right then
+      begin
+        (match r.left with None -> () | Some l -> Stack.push l !next);
+        (match r.right with None -> () | Some r -> Stack.push r !next)
+      end
+    else begin
+      (match r.right with None -> () | Some r -> Stack.push r !next);
+      (match r.left with None -> () | Some l -> Stack.push l !next)
+    end;
+
+    if Stack.length !current = 0
+    then (left_to_right := not !left_to_right; swap current next)
+
+  done
+
 let () =
   let root = new_node "F" in
 
@@ -90,6 +121,7 @@ let () =
   pre_order_traversal root;
   print_newline ();
   in_order_traversal root
-
+  print_newline ();
+  print_spiral root
 ```
 
