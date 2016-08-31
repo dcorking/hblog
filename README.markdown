@@ -11,6 +11,9 @@ updated with
 and build with:
 
 	ghc --make -threaded hblog.hs
+	
+watch with:
+	./hblog watch --no-server 
 
 ## Dependencies:
 
