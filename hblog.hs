@@ -137,8 +137,7 @@ main = hakyllWith config $ do
   match "templates/*" $ compile templateCompiler
 
   where pandocTocWriter = defaultHakyllWriterOptions { writerTableOfContents = True
-                                                     , writerTemplate = "$if(toc)$ $toc$ $endif$\n$body$"
-                                                     , writerStandalone = True }
+                                                     , writerTemplate = Just "$if(toc)$ $toc$ $endif$\n$body$"}
         staticFiles = ["CNAME", "humans.txt", "robots.txt", "favicon.ico"]
       
 

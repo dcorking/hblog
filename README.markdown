@@ -15,6 +15,10 @@ and build with:
 watch with:
 	./hblog watch --no-server 
 
+Might need to pick dependency versions explicitly like so:
+
+	cabal install hakyll --enable-shared --constraint=process==1.4.2.0
+
 ## Dependencies:
 
 ### Ruby
