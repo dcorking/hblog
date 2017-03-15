@@ -17,6 +17,8 @@ to give Armenia a chance.
 
 See part two [here](./2017-03-14-my-practical-armenia-part-two)
 
+On mobile might need to scroll the pro-tip/anecdotes horizontally.
+
 # About me
 
 I don't want to waste too much time talking about myself so I will

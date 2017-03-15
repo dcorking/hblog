@@ -7,6 +7,8 @@ description: Living in Armenia some more
 This is part two from the my
 first [post](./2017-03-12-my-practical-armenia). 
 
+On mobile might need to scroll the pro-tip/anecdotes horizontally.
+
 # Financials
 
 Once in Armenia you'll need to get a feel for the prices and
