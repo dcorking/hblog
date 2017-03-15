@@ -10,15 +10,15 @@ first [post](./2017-03-12-my-practical-armenia).
 # Financials
 
 Once in Armenia you'll need to get a feel for the prices and
-whatnot. Basically you should need to spend at most 5,000 dram a day,
+whatnot. You should need to spend at most 5,000 drams a day,
 that's like $11.
 
 ```
 PRO-TIP: $11 is a slice of pizza and beverage in San Francisco. 
 ```
 
-I can easily survive on just about 1,500 dram a day and
-actually I eat much better than I ever did in America.
+I can easily survive on just about 1,500 drams a day and I eat much
+better than I ever did in America.
 
 Rent should be about at most $300 a month, which I think is quite
 fancy and in the city. I spent $250 a month last year during my first
@@ -31,7 +31,7 @@ system is surprisingly strong, although I suspect at the cost of
 massive government debt, and I like using AmeriaBank as they have a
 pretty good online banking experience and wire transfers from my
 American Chase account only take three days. The local branches are
-super efficient and everyone knows Russian, probably English too.
+super-efficient and everyone knows Russian, probably English too.
 
 # More cultural observations
 
@@ -61,7 +61,7 @@ person'.😄
 ## You are in a different society
 
 Society in general is quite a bit more conservative, but that doesn't
-mean you can't walk around with a mohawk (at least in Yerevan you
+mean you can't walk around with a Mohawk (at least in Yerevan you
 could)
 
 that said...
@@ -88,7 +88,7 @@ American Southern states.
 PRO-TIP: This is a preferable society.
 ```
 
-You really feel more connected to other humans and especially as a
+You *really* feel more connected to other humans and especially as a
 Diasporan coming to Armenia proper as you've made a conscious effort
 to change the course of this society.
 
@@ -104,7 +104,7 @@ home and being a Brooklyn kid, I didn't have all that much culture
 shock other than gender relations here which are quite a bit more
 conservative than San Francisco, for example, but then again which
 society isn't? My biggest culture mismatch mostly related to dating as
-its pretty hard to get women to physically meet you and sex before
+it's pretty hard to get women to physically meet you and sex before
 marriage is mostly a myth, almost a double tragedy is that the girls
 here are much prettier than in America and dress on average much
 better.
@@ -124,11 +124,11 @@ lost there's a lot that I gained.
 * The food is way better, no need waste $150 going to Whole Foods each
   time.
 
-* The women want families and husbands, culture emphasises family.
+* The women want families and husbands, culture emphasizes family.
 
 * The country is small, talented & technically competent people can
   make changes that rapidly affect many people, you can see the
   results quickly.
 
-* You are living in our ancesteral homeland of 3,000 years and are
-  working directly to make it stronger, richer, happier.
+* You are living in our ancestral homeland of 3,000 years and are
+  working directly to make it stronger, richer, happier.🇦🇲
